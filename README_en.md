@@ -1,7 +1,5 @@
 ## VC Client
 
-[Japanese](/README_ja.md) [Korean](/README_ko.md)
-
 ## What's New!
 - v.1.5.3.17b
   - bugfix:
@@ -58,7 +56,7 @@
 3. Cross-platform compatibility
    Supports Windows, Mac (including Apple Silicon M1), Linux, and Google Colaboratory.
 
-# usage
+# Usage
 
 This is an app for performing voice changes with MMVC and so-vits-svc.
 
