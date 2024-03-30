@@ -14,6 +14,7 @@ server/keys
 server/info
 server/in.wav
 server/out.wav
+server/test.wav
 server/G_*.pth
 server/train_config.json
 server/stored_setting.json

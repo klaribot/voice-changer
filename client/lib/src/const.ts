@@ -13,6 +13,7 @@ export const VoiceChangerType = {
     Beatrice: "Beatrice",
     LLVC: "LLVC",
     WebModel: "WebModel",
+    EasyVC: "EasyVC",
 } as const;
 export type VoiceChangerType = (typeof VoiceChangerType)[keyof typeof VoiceChangerType];
 
