@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
+set -o errexit
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd "$script_dir" || exit
+cd "${script_dir}" || exit
 echo "Working directory set to $(pwd)"
 echo "Pull latest from GitHub origin (not upstream)..."
 git pull
-source ./venv/bin/activate
-cd server
+source "${script_dir}/venv/bin/activate"
+cd server || exit
 echo "Update Python packages..."
 python3.10 -m pip install -U pip setuptools wheel
 python3.10 -m pip install -r requirements.txt
 python3.10 -m pip install -U fairseq pyworld
+echo "Start the voice changer server!"
 python3.10 MMVCServerSIO.py -p 18888 --https true \
     --content_vec_500 pretrain/checkpoint_best_legacy_500.pt  \
     --content_vec_500_onnx pretrain/content_vec_500.onnx \
